@@ -7,12 +7,12 @@
 
 body {
     background-color: silver;
-    min-height: 1vh;
+    min-width: 400px;
     font-size: 16px;
 }
 
 header {
-    padding: 30px 15px;
+    padding: 0px 15px 50px 15px;
     background-color: gainsboro;
     display: flex;
     align-items: center;
@@ -20,27 +20,48 @@ header {
     flex-shrink: 0;
 }
 
+header .logo {
+    width: 300px;
+    height: 300px;
+
+}
+
 header h1 {
-    font-size: 38px;
-    color: gray;
+    background-color: gainsboro;
+    font-size: 45px;
+    line-height: 45px;
+    color: rgba(0, 0, 0, 0.75);
     font-weight: 900;
-    margin: 0 0 20px 0;
+    margin: -165px 0 120px 0;
+    padding: 3px 5px;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
 }
 
 header button {
     font-size: 20px;
     font-weight: bold;
-    background-color: gray;
-    color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(0, 0, 0, 0.75);
+    color: rgba(255, 255, 255, 0.75);
     padding: 10px 20px;
+    margin: 0px 7px;
     border-radius: 15px;
     border-bottom: 3px solid rgba(0, 0, 0, 0.25);
     cursor: pointer;
 }
 
+header button.active, header button:hover {
+    background-color: rgba(0, 0, 0, 0.95);
+    color: rgba(255, 255, 255, 0.99);
+}
+
+header button.active {
+    cursor: default;
+}
+
 main {
     padding: 0px;
-    margin-bottom: 40px;
+    margin-bottom: 60px;
 }
 
 main .full-width-img {
@@ -56,8 +77,12 @@ main h2 {
     padding: 0px 20px;
 }
 
+main article {
+    margin: 0px 30px;
+}
+
 main p {
-    margin: 0px 50px 20px 50px;
+    margin-bottom: 20px;
     font-size: 18px;
     line-height: 22px;
 }
